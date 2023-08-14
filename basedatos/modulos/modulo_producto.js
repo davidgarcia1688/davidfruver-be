@@ -16,7 +16,11 @@ import { sequelize } from "../dbase.js";
              },
              precioproducto: {
              type: DataTypes.INTEGER
-             }
+             },
+             foto: {
+               type: DataTypes.TEXT,
+               allowNull: true,
+             },
         },
     {
       timestamps: false

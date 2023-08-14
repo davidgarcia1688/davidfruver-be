@@ -21,13 +21,14 @@ const consultarproducto = async (req, res) => {
 };
 // este metodo permite almacenar los productos 
     const almacenarproducto = async (req, res) => {
-        const { idproducto, nombreproducto, detalleproducto, precioproducto } = req.body;
+        const { idproducto, nombreproducto, detalleproducto, precioproducto, foto } = req.body;
         try{
             const newproducto = await producto.create({
                 idproducto,
                 nombreproducto,
                 detalleproducto,
-                precioproducto
+                precioproducto,
+                foto
 });
             res.status(200).json(newproducto);
         }catch (error){
